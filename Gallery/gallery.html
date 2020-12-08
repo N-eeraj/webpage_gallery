@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset=utf-8>
+		<link rel=stylesheet href=style.css>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	
+	<body bgcolor=#111>
+		<div id=row1>
+			<img src=gohan.png class=thumb id=img1>
+			<img src=goku.png class=thumb id=img2>
+			<img src=shallot.png class=thumb id=img3>
+			<img src=vegeta.png class=thumb id=img4>
+			<img src=trunks.png class=thumb id=img5>
+		</div>
+		
+		<div id=row2>
+			<button id=prev><</button>
+			<img src=shallot.png id=img>
+			<button id=next>></button>
+		</div>
+		
+	</body>
+</html>
+
+<script>
+
+	var i=3,play=false;
+		
+	$('.thumb').click
+	(
+	function()
+		{
+			$('#img').attr('src',$(this).attr('src'));
+			i=parseInt($(this).attr('id').slice(-1));
+		}
+	);
+	
+	$('#next').click
+	(
+		function()
+		{
+			i+=1;
+			if(i>5){i=1;}
+			$('#img'+i).click();
+		}
+	)
+	
+	$('#img').click
+	(
+		function()
+		{
+			play=!play;
+		}
+	)
+	
+	$('#prev').click
+	(
+		function()
+		{
+			i-=1;
+			if(i<1){i=5;}
+			$('#img'+i).click();
+		}
+	)
+	
+	setInterval
+	(
+		function()
+		{
+			if(play)
+			{
+				$('#next').click();
+			}
+		},2250
+	);
+	
+</script>

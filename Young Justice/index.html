@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset = utf-8>
+		<title>Young Justice</title>
+		<link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
+		<link rel = stylesheet href = style.css>
+	</head>
+	
+	<body>
+	
+		<h1 id = main_heading>Young Justice</h1>
+		
+		
+	<div id = container>
+		<div id = thumbs>
+			<div class = row>
+				<img id = img1 class = thumb src = wally.png onClick = fnCover('kf')>
+				<img id = img2 class = thumb src = dick.png onClick = fnCover('nightwing')>
+				<img id = img3 class = thumb src = conner.png onClick = fnCover('sb')>
+			</div>
+			<div class = row>
+				<img id = img4 class = thumb src = artimes.png onClick = fnCover('artimes')>
+				<img id = img5 class = thumb src = kaldur.png onClick = fnCover('aqualad')>
+				<img id = img6 class = thumb src = megan.png onClick = fnCover('missMartian')>
+			</div>
+		</div>
+		
+		<div id = main>
+		</div>
+	</div>
+		
+	</body>
+	
+</html>
+
+<script>
+
+	
+	function fnCover(coverImg)
+	{	
+		document.getElementById('main').style.background='url(' + coverImg + '.jpg)';
+	}
+
+</script>

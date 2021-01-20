@@ -1,0 +1,48 @@
+#row1{
+	margin-top:50px;
+	padding:12px 0;
+	display:flex;
+	background-color:#333;
+	justify-content:space-around;
+}
+
+.thumb{
+	width:5%;
+	transition:transform 0.5s;
+	opacity:0.8;
+}
+.thumb:hover{
+	transform:scale(2);
+	opacity:1;
+}
+
+#row2{
+	margin:3% auto 0 auto;
+	display:flex;
+	justify-content:space-around;
+}
+
+#img{
+	width:20%;
+	display:block;
+	padding:25px 30px;
+	background-image:url(bg.jpg);
+	background-size:auto 100%;
+	background-repeat:no-repeat;
+}
+
+button{
+	outline:0;
+	border:0;
+	border-radius:75px;
+	width:75px;
+	height:75px;
+	background-color:#fa0;
+	color:#f50;
+	font-size:50px;
+}
+button:hover{
+	background-color:#fe0;
+	color:#f90;
+}
+
